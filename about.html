@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jack's Website Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #571111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            color: #f4f4f4;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Navigation Styles */
+        .links {
+            margin-top: 10px;
+        }
+
+        .links ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center; /* Center nav items */
+            margin: 0;
+        }
+
+        .links ul li {
+            margin: 0 15px;
+        }
+
+        .links ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        .links ul li a:hover {
+            background-color: #ffcc00; /* Hover background */
+            color: #571111; /* Hover text color */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto; /* Center the main content */
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center; /* Center-align text */
+        }
+
+        .about-col {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center align the columns */
+            margin-bottom: 20px;
+        }
+
+        .about-col-1 {
+            flex: 1; /* Take equal space */
+            min-width: 300px; /* Minimum width for better mobile view */
+            max-width: 400px; /* Limit image width */
+            padding: 10px; /* Space around the image */
+        }
+
+        .about-col-1 img {
+            width: 100%; /* Make image responsive */
+            border-radius: 8px; /* Rounded corners for image */
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-col-2 {
+            flex: 2; /* Take more space compared to the image */
+            text-align: left; /* Left align text */
+            padding: 10px; /* Space around the text */
+        }
+
+        .sub-title {
+            font-size: 28px;
+            color: #571111;
+            margin: 20px 0;
+        }
+
+        .sub-title2 {
+            font-size: 24px;
+            color: #571111;
+            margin: 15px 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%); /* Start off-screen to the right */
+                opacity: 0; /* Start as invisible */
+            }
+            to {
+                transform: translateX(0); /* End at the original position */
+                opacity: 1; /* End as fully visible */
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-col {
+                flex-direction: column; /* Stack the columns vertically */
+                align-items: center; /* Center align content */
+            }
+
+            .about-col-1,
+            .about-col-2 {
+                max-width: 100%; /* Allow full width for both columns */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>Jack's Website Portfolio</h2>
+        <nav class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="about">
+            <div class="about-col">
+                <div class="about-col-1">
+                    <img src="IMG_1299.jpeg" alt="About me image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Jack Bradley and I am currently pursuing a double major in Computer Science and Business at Eastern University, which has helped me develop strong problem-solving and programming skills. In addition to my academic experience, I am a member of the varsity lacrosse team, which has not only strengthened my understanding of the strategies crucial to success in sports but also helped me develop the skills essential for being part of a successful team structure. My experience as an athlete has also instilled in me a strong work ethic, teamwork, and a competitive drive. In my free time, I enjoy working on Excel and database projects, and I’m passionate about solving complex problems through coding in Python and Java. During the school year, I’ve been part of a data group working closely with our strength trainers, which has strengthened my ability to collaborate effectively in a team setting.</p>
+                    <h1 class="sub-title2">Personal Life</h1>
+                    <p>Outside of school and lacrosse, I love spending time with friends and family. I enjoy catching a movie with friends or hitting the golf course for 18 holes on a sunny summer day. My favorite times of the year are watching football with my dad and going to the beach with my girlfriend. Whether it's a thrilling game or a relaxing day by the shore, these moments are what I cherish most.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Jack's Website Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #571111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            color: #f4f4f4;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Navigation Styles */
+        .links {
+            margin-top: 10px;
+        }
+
+        .links ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center; /* Center nav items */
+            margin: 0;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .links ul li {
+            margin: 0 15px;
+        }
+
+        .links ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        .links ul li a:hover {
+            background-color: #ffcc00; /* Hover background */
+            color: #571111; /* Hover text color */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto; /* Center the main content */
+        }
+
+        /* Activities Section */
+        #Experience {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center; /* Center-align text */
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #571111;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        h3 {
+            font-size: 17px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            text-align: left; /* Align text to the left */
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            main {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+
+            h1 {
+                font-size: 24px; /* Smaller font size for h1 */
+            }
+
+            h2 {
+                font-size: 20px; /* Smaller font size for h2 */
+            }
+
+            h3 {
+                font-size: 16px; /* Smaller font size for h3 */
+            }
+
+            .links ul {
+                flex-direction: column; /* Stack nav items vertically */
+                align-items: center; /* Center align nav items */
+            }
+
+            .links ul li {
+                margin: 5px 0; /* Reduce margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px; /* Further reduce font size for h1 */
+            }
+
+            h2 {
+                font-size: 18px; /* Further reduce font size for h2 */
+            }
+
+            h3 {
+                font-size: 14px; /* Further reduce font size for h3 */
+            }
+
+            li {
+                font-size: 16px; /* Smaller font size for list items */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>Jack's Website Portfolio</h2>
+        <nav class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="Experience">
+            <h1>Work Experience</h1>
+            <h2><strong>Eastern Athletics - Data Analyst</strong></h2>
+            <h3>Dates • 09/2024 - Current</h3>
+            <ul>
+                <li>- Analyzed large datasets to identify trends, patterns, and correlations for insights.</li>
+                <li>- Each team was grouped with certain players on their team to optimize growth.</li>
+            </ul>
+            <h2><strong>Waynesborough Country Club - Houseman</strong></h2>
+            <h3>Dates • 05/2024 - Current</h3>
+            <ul>
+                <li>- Perform comprehensive houseman duties to ensure the cleanliness and organization of facilities.</li>
+                <li>- Collaborate with team members to maintain a high standard of the club.</li>
+            </ul>
+            <h2><strong>Simply Moving Company</strong></h2>
+            <h3>Dates • 06/2021 - 04/2023</h3>
+            <ul>
+                <li>- Loaded, packed, and unpacked items.</li>
+                <li>- Disassembled and assembled furniture for residential and commercial accounts.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
