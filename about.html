@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jack's Website Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #571111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Toggle Button */
+        .toggle-button {
+            background-color: #571111;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            padding: 5px;
+            cursor: pointer;
+            display: block; /* Always show toggle button */
+            margin-top: -40px;
+        }
+
+        /* Navigation Styles */
+        .links {
+            position: absolute;
+            top: 80px; /* Positioned below the fixed header */
+            left: 0;
+            width: 100%;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .links.expanded {
+            display: flex; /* Show when expanded */
+        }
+
+        .links ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .links ul li {
+            margin: 0px 0;
+        }
+
+        .links ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+            background-color: #571111; /* Background only for the link */
+            display: inline-flex; /* Apply background only around the text */
+        }
+
+        .links ul li a:hover {
+            background-color: #ffcc00; /* Hover background */
+            color: #571111; /* Hover text color */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-col {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .about-col-1 {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 10px;
+        }
+
+        .about-col-1 img {
+            width: 100%;
+            border-radius: 8px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-col-2 {
+            flex: 2;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .sub-title {
+            font-size: 28px;
+            color: #571111;
+            margin: 20px 0;
+        }
+
+        .sub-title2 {
+            font-size: 24px;
+            color: #571111;
+            margin: 15px 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-col {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-col-1,
+            .about-col-2 {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>Jack's Website Portfolio</h2>
+        <button class="toggle-button">☰</button>
+        <nav class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="about">
+            <div class="about-col">
+                <div class="about-col-1">
+                    <img src="fam.jpeg" alt="About me image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Jack Bradley and I am currently pursuing a double major in Computer Science and Business at Eastern University, which has helped me develop strong problem-solving and programming skills. In addition to my academic experience, I am a member of the varsity lacrosse team, which has not only strengthened my understanding of the strategies crucial to success in sports but also helped me develop the skills essential for being part of a successful team structure. My experience as an athlete has also instilled in me a strong work ethic, teamwork, and a competitive drive. In my free time, I enjoy working on Excel and database projects, and I’m passionate about solving complex problems through coding in Python and Java. During the school year, I’ve been part of a data group working closely with our strength trainers, which has strengthened my ability to collaborate effectively in a team setting.</p>
+                    <h1 class="sub-title2">Personal Life</h1>
+                    <p>Outside of school and lacrosse, I love spending time with friends and family. I enjoy catching a movie with friends or hitting the golf course for 18 holes on a sunny summer day. My favorite times of the year are watching football with my dad and going to the beach with my girlfriend. Whether it's a thrilling game or a relaxing day by the shore, these moments are what I cherish most.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Toggle Button Logic
+        const toggleButton = document.querySelector('.toggle-button');
+        const navLinks = document.querySelector('.links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('expanded');
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
